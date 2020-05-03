@@ -16,6 +16,15 @@ function validaCPF(cpf) {
   		soma += numeros.charAt(10 - i) * i;
   	}
   	console.log("resultado " + soma);
+
+  	var resultado = (soma % 11) < 2 ? 0 : 11 - (soma % 11);
+  	// validacao do primeiro digito
+  	if (resultado != digitos.charAt(0)){
+  		return false;
+  	} else {
+
+  	  console.log(digitos.charAt(0) + ' é a primeira posicao da variavel soma');
+  	}
   	return true;
   }
 }
